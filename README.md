@@ -29,8 +29,7 @@ F-Ecosystem is a powerful, self-hosted web server designed to create a unified a
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/Hardik-Dvn/f-ecosystem-server.git](https://github.com/your-username/f-ecosystem-server.git)
-    cd f-ecosystem-server
+    git clone https://github.com/Hardik-Dvn/f-ecosystem
     ```
 
 2.  **Install dependencies for the server and agent:**
