@@ -6,7 +6,7 @@ const si = require('systeminformation');
 
 // --- CONFIGURATION ---
 const PROJECT_ID_TO_CONTROL = 1; 
-const SERVER_URL = "http://localhost:3000";
+const SERVER_URL = "https://f-ecosystem.onrender.com/";
 // --------------------
 
 const baseWorkspaceDir = path.join(__dirname, 'terminal_workspace');
