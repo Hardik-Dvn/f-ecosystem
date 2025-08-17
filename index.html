@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>F-Ecosystem [Terminal]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- Auth Screen -->
+    <div id="auth-container" class="container">
+        <h2>[ F-ECOSYSTEM ]</h2>
+        <p id="error-message"></p>
+        <div class="form-group"><input id="username" type="text" placeholder="Enter username..." required></div>
+        <div class="form-group"><input id="password" type="password" placeholder="Enter password..." required></div>
+        <button id="login-btn">Login</button>
+        <button id="register-btn">Register</button>
+    </div>
+
+    <!-- Project Dashboard Screen -->
+    <div id="project-dashboard" class="container">
+        <h2 id="dashboard-title">[ Projects Dashboard ]</h2>
+        <p>Select a project or create a new one.</p>
+        <ul id="project-list"></ul>
+        <form id="new-project-form" action=""><input id="new-project-input" placeholder="Enter new project name..."><button id="create-project-btn" type="submit">Create</button></form>
+    </div>
+
+    <!-- Chat Screen -->
+    <div id="chat-container">
+        <div id="message-box">
+            <h2 id="chat-title">[ Project ]</h2>
+            <div class="tabs">
+                <div class="tab active" data-tab="chat">Chat</div>
+                <div class="tab" data-tab="terminal">Terminal</div>
+            </div>
+            <div id="agent-status" class="offline">Agent Offline</div>
+            <div id="chat" class="tab-content active">
+                <button id="open-todo-btn">To-Do List</button>
+                <ul id="messages"></ul>
+                <form id="form" action=""><input id="message-input" autocomplete="off" /><div class="file-input-wrapper"><button type="button">Attach</button><input type="file" id="file-input" name="myFile" /></div></form>
+            </div>
+            <div id="terminal" class="tab-content">
+                <pre id="terminal-output"></pre>
+                <form id="terminal-form" action=""><input id="terminal-input" autocomplete="off" /></form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Other Modals -->
+    <div id="copy-notification">Copied!</div>
+    <div id="todo-modal-backdrop">
+        <div id="todo-modal" class="container">
+            <h2>[ To-Do List ]</h2>
+            <ul id="todo-list"></ul>
+            <form id="new-todo-form" action=""><input id="new-todo-input" placeholder="Add new task..."><button type="submit">Add Task</button></form>
+        </div>
+    </div>
+    <div id="notification-popup">
+        <h4 id="notification-title"></h4>
+        <p id="notification-text"></p>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>
