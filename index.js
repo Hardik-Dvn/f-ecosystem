@@ -16,10 +16,10 @@ const PORT = 3000;
 
 // --- ## NEW: Backblaze B2 Configuration ## ---
 // Apni Backblaze ki details yahan daalo
-const B2_ENDPOINT = 's3.us-west-004.backblazeb2.com'; // Apna endpoint daalo
-const B2_KEY_ID = 'YOUR_KEY_ID'; // Apna keyID daalo
-const B2_APP_KEY = 'YOUR_APPLICATION_KEY'; // Apna applicationKey daalo
-const B2_BUCKET_NAME = 'f-ecosystem-hardik-storage'; // Apna bucket name daalo
+const B2_ENDPOINT = 's3.us-east-005.backblazeb2.com'; // Apna endpoint daalo
+const B2_KEY_ID = '0051879dbadce580000000001'; // Apna keyID daalo
+const B2_APP_KEY = 'K005dr9HX0CmSoGqwaCmfpUk0CHLRkY'; // Apna applicationKey daalo
+const B2_BUCKET_NAME = 'f-ecosystem'; // Apna bucket name daalo
 
 const s3 = new aws.S3({
     endpoint: new aws.Endpoint(B2_ENDPOINT),
